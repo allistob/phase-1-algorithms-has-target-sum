@@ -1,7 +1,18 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  // iterate through each number 
+for(let i = 0 i < array.length; i++){
+  //for the current num, identify a complement that adds to the target (comp= target-num)
+  const complement = target - array[i]
+  //iterate through the rest of the array 
+  for (let j = i + 1; j <array.length; j++ ){
+    //check if any number is our complement 
+    // if so, return true
+    if (array[j] === complement) return true
+  }
 }
-
+//if i reach the end of the array, return false
+return false;
+}
 /* 
   Write the Big O time complexity of your function here
 */
