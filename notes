@@ -1,0 +1,56 @@
+
+/*function hasTargetSum(array, target) {
+  // iterate through each number 
+for(let i = 0; i < array.length; i++){
+  //for the current num, identify a complement that adds to the target (comp= target-num)
+  const complement = target - array[i]
+  //iterate through the rest of the array 
+  for (let j = i + 1; j <array.length; j++ ){
+    //check if any number is our complement 
+    // if so, return true
+    if (array[j] === complement) return true
+  }
+}
+//if i reach the end of the array, return false
+return false;
+}
+
+//O(n) runtime (if we have to iterate through every element to find an element that has an O(n) runtime)
+function findSock(array) {
+  for (const item of array) {
+    if (item === "sock") return "sock";
+  }
+}
+
+//O(1) runtime
+function findSock(object){
+  if(object.sock) return "sock"
+}
+
+/* 
+  Write the Big O time complexity of your function here
+  runtime :O(n^2)
+  space: O(n)
+
+/*
+example - 
+hasTargetSum([1,2,3,4], 6)
+seenNumber = {
+  1: true,
+  2: true,
+  3: true,
+  4: false
+}
+
+
+create an object to keep track of numbers we've already seen
+iterate through the array 
+for the current num, identify a complement that adds to the target (comp = target - num)
+iterate through the rest of the array
+check if any key on our object  is the complement 
+  check if any number is our complement 
+  if so, return true
+otherwise, add that number to the object 
+
+  if i reach the end of the array, return false
+*/
